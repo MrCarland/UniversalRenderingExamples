@@ -1,0 +1,30 @@
+branch: trunk
+---
+Run_All:
+  name: Run All Jobs
+  variables:
+    UNITY_BRANCH: "{{ branch }}"
+  triggers:
+    external:
+      source: git@github.cds.internal.unity3d.com:unity/unity.git
+      expression: push.branch eq "{{ branch }}"
+      refs_on_this_repository:
+        - "{{ branch }}"
+  dependencies:
+  - path: .yamato/android.yml#Run_Player_With_Tests_Android
+    rerun: always
+  - path: .yamato/ios.yml#Run_Player_With_Tests_iOS  
+    rerun: always
+  # - path: .yamato/ps4.yml#Run_Player_With_Tests_PS4
+  #   rerun: always
+  # - path: .yamato/ps5.yml#Run_Player_With_Tests_PS5
+  #   rerun: always
+  - path: .yamato/standalone_linux.yml#Run_Player_With_Tests_StandaloneLinux64
+    rerun: always
+  - path: .yamato/standalone_macosx.yml#Run_Player_With_Tests_StandaloneOSX
+    rerun: always
+  - path: .yamato/standalone_windows64.yml#Run_Player_With_Tests_StandaloneWindows64
+    rerun: always
+  # - path: .yamato/xbox.yml#Run_Player_With_Tests_XBoxOne
+  #   rerun: always
+

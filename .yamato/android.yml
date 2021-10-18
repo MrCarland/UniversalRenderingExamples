@@ -1,0 +1,52 @@
+Build_Player_With_Tests_Android:
+  name: Build Players with tests Android
+  variables:
+    UNITY_BRANCH: trunk
+  agent:
+      # Do not choose machines with gpus or connected devices to perform this step
+      # If it takes a lot of time to compile your project prefer flavor with more cores.
+      # see https://internaldocs.hq.unity3d.com/bokken/reference/flavors/
+      type: Unity::VM
+      image: mobile/android-execution-base:stable
+      flavor: b1.xlarge
+  commands:
+    - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
+    - unity-downloader-cli -c Editor -c Android -u %UNITY_BRANCH% --wait 
+    - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
+    - ./utr --suite=playmode --platform=Android --editor-location=.Editor --testproject=. --player-save-path=build/players --artifacts_path=build/logs --scripting-backend=il2cpp  --build-only
+  artifacts:
+    players:
+        paths:
+          - "build/players/**"
+    logs:
+        paths:
+          - "build/logs/**"
+
+Run_Player_With_Tests_Android:
+  name: Run Test on an android player
+  variables:
+    UNITY_BRANCH: trunk
+  # no need to clone repo
+  skip_checkout: true
+  agent:
+      # Running tests is fast, building it not requried, therefore flavor can be smaller. see https://internaldocs.hq.unity3d.com/bokken/reference/flavors/
+      # Now we can use an 'expensive' type. 
+      type: Unity::mobile::samsung
+      image: mobile/android-execution-base:stable
+      flavor: b1.large
+  dependencies:
+    - path: .yamato/android.yml#Build_Player_With_Tests_Android
+      rerun: always
+  commands:
+    # download ADB keys so the device would trust the VM
+    # This would only be needed if you use non-android images. The image used in this example already has the keys and the following 2 lines are not required
+    # - wget http://artifactory-slo.bf.unity3d.com/artifactory/mobile-generic/android/ADBKeys.zip!/adbkey.pub -O %USERPROFILE%/.android/adbkey.pub
+    # - wget http://artifactory-slo.bf.unity3d.com/artifactory/mobile-generic/android/ADBKeys.zip!/adbkey -O %USERPROFILE%/.android/adbkey
+    - |
+       curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
+       start %ANDROID_SDK_ROOT%\platform-tools\adb.exe devices
+       ./utr --suite=playmode --platform=android --player-load-path=build/players --artifacts_path=build/test-results
+  artifacts:
+    logs:
+        paths:
+          - "build/test-results/**"
