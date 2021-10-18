@@ -34,7 +34,7 @@ Run_Player_With_Tests_Android:
       type: Unity::mobile::samsung
       image: mobile/android-execution-base:stable
       flavor: b1.large
-      type: s10e-us
+      model: s10e-us
   dependencies:
     - path: .yamato/android.yml#Build_Player_With_Tests_Android
       rerun: always
