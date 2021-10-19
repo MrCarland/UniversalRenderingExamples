@@ -1,9 +1,11 @@
 branch: trunk
+graphics_branch: master
 ---
 Run_All:
   name: Run All Jobs
   variables:
     UNITY_BRANCH: "{{ branch }}"
+    GRAPHICS_BRANCH: "{{ graphics_branch }}"
   triggers:
     external:
       source: git@github.cds.internal.unity3d.com:unity/unity.git
