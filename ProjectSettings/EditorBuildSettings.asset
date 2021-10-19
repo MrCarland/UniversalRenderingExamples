@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_CompletedDemos/FPS/FPSCameraCompletedStackedWithTerrain/FPSCameraDemoStackedWithTerrain.unity
     guid: 364fef6a29a47431ca144c48bd6ff12d
-  - enabled: 1
-    path: Assets/_CompletedDemos/UnityOcclusionDemoCompleted/UnityOcclusionDemo.unity
-    guid: 81de0b9b05bab4036a0929fda41a5de1
   m_configObjects: {}
