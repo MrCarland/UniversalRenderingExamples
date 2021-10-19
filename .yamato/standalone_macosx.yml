@@ -11,7 +11,7 @@
         image: mobile/macos-10.15-testing:stable
         flavor: b1.large
     commands:
-      - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH%
+      - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
       - ls 
       - brew tap --force-auto-update unity/unity git@github.cds.internal.unity3d.com:unity/homebrew-unity.git
       - brew install unity-config
@@ -23,7 +23,7 @@
       - unity-config project add testable unity.graphictests.performance.universal  --project-path .
       - unity-config project set project-update false --project-path .
       - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
-      - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait --published --wait
+      - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait 
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
       - ./utr --suite=playmode --platform=StandaloneOSX --editor-location=.Editor --testproject=. --player-save-path=build/players --artifacts_path=build/logs --build-only
