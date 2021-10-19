@@ -11,11 +11,14 @@
         flavor: b1.xlarge
     commands:
       - git clone git@github.com:Unity-Technologies/Graphics.git
-      - ls 
-      - choco install unity-config
-      - unity-config project add dependency "com.unity.render-pipelines.core@file:Graphics/com.unity.render-pipelines.core" --project-path .
-      - unity-config project add dependency "com.unity.render-pipelines.universal@file:Graphics/com.unity.render-pipelines.universal" --project-path .
-      - unity-config project add dependency "com.unity.shadergraph@file:Graphics/com.unity.shadergraph" --project-path .
+      - sudo rm -f /etc/apt/sources.list /etc/apt/sources.list.d/{nodesource,teamviewer,deadsnakes-ubuntu-ppa-}*
+      - curl -L https://artifactory.prd.it.unity3d.com/artifactory/api/gpg/key/public | sudo apt-key add -
+      - sudo sh -c "echo 'deb https://artifactory.prd.it.unity3d.com/artifactory/unity-apt-local bionic main' > /etc/apt/sources.list.d/unity.list"
+      - sudo apt update
+      - sudo apt install -y unity-config
+      - unity-config project add dependency "com.unity.render-pipelines.core@file:../Graphics/com.unity.render-pipelines.core" --project-path .
+      - unity-config project add dependency "com.unity.render-pipelines.universal@file:../Graphics/com.unity.render-pipelines.universal" --project-path .
+      - unity-config project add dependency "com.unity.shadergraph@file:../Graphics/com.unity.shadergraph" --project-path .
       - unity-config project add dependency com.unity.addressables@1.16.7 --project-path .
       - unity-config project add dependency com.unity.scriptablebuildpipeline@1.11.2 --project-path .
       - unity-config project add dependency com.unity.test-framework@1.1.29 --project-path .
