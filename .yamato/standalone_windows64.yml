@@ -2,6 +2,7 @@
     name: Build Players with tests StandaloneWindows64
     variables:
       UNITY_BRANCH: trunk
+      GRAPHICS_BRANCH: master
     agent:
         # Do not choose machines with gpus or connected devices to perform this step
         # If it takes a lot of time to compile your project prefer flavor with more cores.
@@ -10,7 +11,7 @@
         image: sdet/gamecode_win10:latest
         flavor: b1.xlarge
     commands:
-      - git clone git@github.com:Unity-Technologies/Graphics.git
+      - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout %GRAPHICS_BRANCH%
       - ls 
       - choco source add -n Unity -s https://artifactory.prd.it.unity3d.com/artifactory/api/nuget/unity-choco-local
       - choco install unity-config

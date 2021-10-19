@@ -2,6 +2,7 @@ Build_Player_With_Tests_iOS:
   name: Build Players with tests iOS
   variables:
     UNITY_BRANCH: trunk
+    GRAPHICS_BRANCH: master
   agent:
       # Do not choose machines with gpus or connected devices to perform this step
       # If it takes a lot of time to compile your project prefer flavor with more cores.
@@ -10,11 +11,10 @@ Build_Player_With_Tests_iOS:
       image: mobile/macos-10.15-testing:stable
       flavor: b1.large
   commands:
-    - git clone git@github.com:Unity-Technologies/Graphics.git
+    - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
     - ls 
     - brew tap --force-auto-update unity/unity git@github.cds.internal.unity3d.com:unity/homebrew-unity.git
     - brew install unity-config
-    - choco install unity-config
     - unity-config project add dependency "com.unity.render-pipelines.core@file:../Graphics/com.unity.render-pipelines.core" --project-path .
     - unity-config project add dependency "com.unity.render-pipelines.universal@file:../Graphics/com.unity.render-pipelines.universal" --project-path .
     - unity-config project add dependency "com.unity.shadergraph@file:../Graphics/com.unity.shadergraph" --project-path .
