@@ -1,0 +1,6 @@
+Assets/_CompletedDemos/3DCharacterUI/3DCharacterUI.unity
+Assets/_CompletedDemos/CockpitView/CockpitDemo.unity
+Assets/_CompletedDemos/FPS/FPSCameraCompletedStackedWithTerrain/FPSCameraDemoStackedWithTerrain.unity
+Assets/_CompletedDemos/ToonOutlinePostprocessCompleted/ToonOutlinePost.unity
+Assets/_CompletedDemos/UnityOcclusionDemoCompleted/UnityOcclusionDemo.unity
+Assets/_CompletedDemos/3DSkybox/3DSkybox.unity

@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3596636025
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 82ec36da53e7cf70231808402a406c07
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b0363f7088f9761414f730641bf9a24b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/ReferenceImages/Linear/Android/Vulkan/None/UnityOcclusionDemo.png
+- Assets/ReferenceImages/Linear/Android/Vulkan/None/FPSCameraDemoStackedWithTerrain.png
+- Assets/ReferenceImages/Linear/Android/Vulkan/None/3DCharacterUI.png
+- Assets/ReferenceImages/Linear/Android/Vulkan/None/CockpitDemo.png
+Dependencies: []

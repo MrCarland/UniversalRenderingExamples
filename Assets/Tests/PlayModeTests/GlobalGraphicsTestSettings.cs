@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GraphicsTests
 {
-    public const string universalPackagePath = "Assets/ReferenceImages/";
+    public const string universalPackagePath = "Assets/ReferenceImages";
 
     [UnityTest, Category("TerrainTest")]
     [PrebuildSetup("SetupGraphicsTestCases")]

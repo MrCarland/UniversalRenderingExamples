@@ -8,7 +8,7 @@ public class GlobalGraphicsTestSettings : GraphicsTestSettings
     {
         ImageComparisonSettings.TargetWidth = 1920;
         ImageComparisonSettings.TargetHeight = 1080;
-        ImageComparisonSettings.AverageCorrectnessThreshold = 0.0015f;
+        ImageComparisonSettings.AverageCorrectnessThreshold = 0.0050f;
         ImageComparisonSettings.PerPixelCorrectnessThreshold = 0.00015f;
     }
 }

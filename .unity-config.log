@@ -1,0 +1,49 @@
+2021-10-20 09:33:37.0870|TRACE|System.Object|Invocation: project add dependency com.unity.render-pipelines.core@file:../Graphics/com.unity.render-pipelines.core --project-path .
+2021-10-20 09:33:37.2024|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:33:37.2038|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:33:37.2401|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:33:37.4479|TRACE|System.Object|Adding 'com.unity.render-pipelines.core' version 'file:../Graphics/com.unity.render-pipelines.core' to manifest
+2021-10-20 09:33:37.4893|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:33:37.4926|INFO|System.Object|OK
+2021-10-20 09:34:06.1293|TRACE|System.Object|Invocation: project add dependency com.unity.render-pipelines.universal@file:../Graphics/com.unity.render-pipelines.universal --project-path .
+2021-10-20 09:34:06.2365|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:34:06.2372|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:34:06.2662|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:34:06.4252|TRACE|System.Object|Adding 'com.unity.render-pipelines.universal' version 'file:../Graphics/com.unity.render-pipelines.universal' to manifest
+2021-10-20 09:34:06.4686|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:34:06.4702|INFO|System.Object|OK
+2021-10-20 09:34:15.2518|TRACE|System.Object|Invocation: project add dependency com.unity.shadergraph@file:../Graphics/com.unity.shadergraph --project-path .
+2021-10-20 09:34:15.3687|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:34:15.3694|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:34:15.3993|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:34:15.5787|TRACE|System.Object|Adding 'com.unity.shadergraph' version 'file:../Graphics/com.unity.shadergraph' to manifest
+2021-10-20 09:34:15.6159|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:34:15.6172|INFO|System.Object|OK
+2021-10-20 09:36:35.1469|TRACE|System.Object|Invocation: project add dependency com.unity.test-framework@1.1.29 --project-path .
+2021-10-20 09:36:35.2494|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:36:35.2503|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:36:35.2768|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:36:35.4417|TRACE|System.Object|Adding 'com.unity.test-framework' version '1.1.29' to manifest
+2021-10-20 09:36:35.4770|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:35.4783|INFO|System.Object|OK
+2021-10-20 09:36:40.8604|TRACE|System.Object|Invocation: project add testable com.unity.render-pipelines.core --project-path .
+2021-10-20 09:36:40.9659|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:36:40.9666|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:36:40.9975|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:36:41.1628|TRACE|System.Object|Adding 'com.unity.render-pipelines.core' to testables of '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:41.2004|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:41.2018|INFO|System.Object|OK
+2021-10-20 09:36:46.7095|TRACE|System.Object|Invocation: project add testable unity.graphictests.performance.universal --project-path .
+2021-10-20 09:36:46.8112|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:36:46.8119|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:36:46.8382|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:36:46.9497|TRACE|System.Object|Adding 'unity.graphictests.performance.universal' to testables of '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:46.9836|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:46.9847|INFO|System.Object|OK
+2021-10-20 09:36:57.7073|TRACE|System.Object|Invocation: project set project-update false --project-path .
+2021-10-20 09:36:57.8200|TRACE|UnityConfig.Core.Settings.Settings|Reading settings data
+2021-10-20 09:36:57.8208|TRACE|UnityConfig.Core.Settings.Settings|Project path was empty in settings file. Returning default value ''
+2021-10-20 09:36:57.8499|TRACE|System.Object|Deserializing Project manifest for /Users/mantassk/Desktop/UniversalRenderingExamples
+2021-10-20 09:36:57.9681|INFO|System.Object|Project update set to: False
+2021-10-20 09:36:58.0076|TRACE|System.Object|Saving Project manifest to '/Users/mantassk/Desktop/UniversalRenderingExamples/Packages/manifest.json'
+2021-10-20 09:36:58.0090|INFO|System.Object|OK
