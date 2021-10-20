@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 61
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -68,14 +68,14 @@ MonoBehaviour:
     y: 0
     width: 761
     height: 1017
-  m_MinSize: {x: 101, y: 121}
+  m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 40
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 138
+    ID: 152
     splitterInitialOffset: 0
     currentActiveSplitter: -1
     realSizes:
@@ -1480,23 +1480,7 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1134
       parentUniqueId: UnityEngine.TestTools.Graphics.Tests.dll/UnityEngine/TestTools/Graphics/Tests/ImageAssertTests/[UnityEngine.TestTools.Graphics.Tests][UnityEngine.TestTools.Graphics.Tests.ImageAssertTests.PerPixelTest][suite]
-    m_ResultText: 'ToonOutlinePost (0.881s)
-
-      ---
-
-      There are 4 audio listeners
-      in the scene. Please ensure there is always exactly one audio listener in the
-      scene.
-
-      There are 4 audio listeners in the scene. Please ensure there
-      is always exactly one audio listener in the scene.
-
-      There are 4 audio
-      listeners in the scene. Please ensure there is always exactly one audio listener
-      in the scene.
-
-      There are 4 audio listeners in the scene. Please ensure
-      there is always exactly one audio listener in the scene.'
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
@@ -3008,7 +2992,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -2032128904892744680, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -7501376956915960154, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3034,22 +3018,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_CompletedDemos/ToonOutlinePostprocessCompleted
+    - Assets/ReferenceImages/Linear/WindowsPlayer
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_CompletedDemos/ToonOutlinePostprocessCompleted
+  - Assets/ReferenceImages/Linear/WindowsPlayer
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/mantassk/Desktop/UniversalRenderingExamples
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 15}
-    m_SelectedIDs: 98820100
-    m_LastClickedID: 98968
-    m_ExpandedIDs: 000000003c6d0100426d0100446d0100c66d0100d66d01004a8201004c820100de1d020000ca9a3b
+    scrollPos: {x: 0, y: 111.54712}
+    m_SelectedIDs: 48aa0000
+    m_LastClickedID: 43592
+    m_ExpandedIDs: 00000000fea7000000a8000002a8000004a8000006a8000008a800000aa800000ca80000eca9000048aa00004eaa000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3077,7 +3061,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c6d01003e6d0100406d0100426d0100446d0100
+    m_ExpandedIDs: 00000000fea7000000a8000002a8000004a8000006a8000008a800000aa800000ca80000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3191,7 +3175,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: -9000905672528348964, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3209,7 +3193,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f25bf9ff0a5df9ff9e5df9ff025ff9ffec62f9ff7a6bf9ff8089f9ff1e91f9ff7a91f9ffe097f9ffe497f9ff4898f9ff4abcf9ffe0bcf9ff42faf9ff961cfaff1c22faffbc22faff7444faff0847faffa847faff2285faffd689faff768afaffc2c7faff76ccfaff5e88fbfffe88fbff8ac4fbffe6cbfbff68eefbfffceefbfff82bfcffbc4cfcff504dfcff108afcff22abfcffea7ffdff9289fdffac92fdfffea4fdff02acfdffdcb3fdff60c0fdfff0c0fdff4cd3fdff12e2fdffa2e2fdff0ef5fdff6402fefff402feff5415feff942cfeffa62dfeff362efeff8a40feff9056feffa257feff3258feff906afeff9887feffaa88feff068cfeff86aafefffcacfeffecc0feff46c5feff7ad8feff2ce1feff5ef4feff78f5feff1a0affffce0bffff369e0100
+      m_ExpandedIDs: f0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3225,7 +3209,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -3249,7 +3233,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: -131512000283675692, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 2318424515335265636, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3577,7 +3561,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Game
-    m_Image: {fileID: 257045534191678443, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -2087823869225018852, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -3596,7 +3580,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
+  m_TargetSize: {x: 1550, y: 1122}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3605,16 +3589,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000012000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000011000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -480
-    m_HBaseRangeMax: 480
-    m_VBaseRangeMin: -270
-    m_VBaseRangeMax: 270
+    m_HBaseRangeMin: -387.5
+    m_HBaseRangeMax: 387.5
+    m_VBaseRangeMin: -280.5
+    m_VBaseRangeMax: 280.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3634,7 +3618,7 @@ MonoBehaviour:
       y: 21
       width: 775
       height: 561
-    m_Scale: {x: 0.8072917, y: 0.8072916}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 387.5, y: 280.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -3642,12 +3626,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -480
-      y: -347.45807
-      width: 960
-      height: 694.91614
+      x: -387.5
+      y: -280.5
+      width: 775
+      height: 561
     m_MinimalGUI: 1
-  m_defaultScale: 0.8072917
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1550, y: 1164}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -3670,7 +3654,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Console
-    m_Image: {fileID: -3303252850963283158, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 111653112392082826, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:

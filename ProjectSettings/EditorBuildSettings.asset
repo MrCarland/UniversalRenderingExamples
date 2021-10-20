@@ -20,7 +20,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_CompletedDemos/UnityOcclusionDemoCompleted/UnityOcclusionDemo.unity
     guid: 81de0b9b05bab4036a0929fda41a5de1
-  - enabled: 1
-    path: Assets/_CompletedDemos/3DSkybox/3DSkybox.unity
-    guid: 0823948fb845845fc95b6f111d90c639
   m_configObjects: {}
