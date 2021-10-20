@@ -8,10 +8,9 @@
         # If it takes a lot of time to compile your project prefer flavor with more cores.
         # see https://internaldocs.hq.unity3d.com/bokken/reference/flavors/
         type: Unity::VM::osx
-        image: mobile/macos-10.15-testing:stable
+        image: slough-ops/macos-10.14-xcode:stable
         flavor: b1.large
     commands:
-      - git config --global core.compression 9
       - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
       - ls 
       - brew tap --force-auto-update unity/unity git@github.cds.internal.unity3d.com:unity/homebrew-unity.git
