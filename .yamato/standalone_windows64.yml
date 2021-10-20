@@ -11,6 +11,7 @@
         image: sdet/gamecode_win10:stable
         flavor: b1.xlarge
     commands:
+      - git config --global core.compression 9
       - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout %GRAPHICS_BRANCH%
       - ls 
       - choco source add -n Unity -s https://artifactory.prd.it.unity3d.com/artifactory/api/nuget/unity-choco-local

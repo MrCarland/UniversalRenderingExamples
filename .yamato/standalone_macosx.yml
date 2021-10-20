@@ -11,6 +11,7 @@
         image: mobile/macos-10.15-testing:stable
         flavor: b1.large
     commands:
+      - git config --global core.compression 9
       - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
       - ls 
       - brew tap --force-auto-update unity/unity git@github.cds.internal.unity3d.com:unity/homebrew-unity.git
