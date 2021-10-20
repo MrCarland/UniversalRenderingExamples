@@ -11,6 +11,7 @@
         image: cds-ops/ubuntu-18.04-base:stable
         flavor: b1.xlarge
     commands:
+      - git config --global core.compression 9
       - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
       - sudo rm -f /etc/apt/sources.list /etc/apt/sources.list.d/{nodesource,teamviewer,deadsnakes-ubuntu-ppa-}*
       - curl -L https://artifactory.prd.it.unity3d.com/artifactory/api/gpg/key/public | sudo apt-key add -
@@ -28,7 +29,7 @@
       - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait 
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
-      - ./utr --suite=playmode --platform=StandaloneLinux64 --editor-location=.Editor --testproject=. --player-save-path=build/players --artifacts_path=build/logs --build-only
+      - ./utr --suite=playmode --platform=StandaloneLinux64 --editor-location=.Editor --testfilter=UniversalRenderingExamples--testproject=. --player-save-path=build/players --artifacts_path=build/logs --build-only
     artifacts:
       players:
           paths:
@@ -56,7 +57,7 @@
     commands:
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
-      - ./utr --suite=playmode --platform=StandaloneLinux64 --player-load-path=build/players --artifacts_path=build/test-results --player-connection-ip=auto
+      - ./utr --suite=playmode --platform=StandaloneLinux64 --player-load-path=build/players --testfilter=UniversalRenderingExamples --artifacts_path=build/test-results --player-connection-ip=auto
     artifacts:
       logs:
           paths:

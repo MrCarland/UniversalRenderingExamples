@@ -11,6 +11,7 @@ Build_Player_With_Tests_iOS:
       image: mobile/macos-10.15-testing:stable
       flavor: b1.large
   commands:
+    - git config --global core.compression 9
     - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
     - ls 
     - brew tap --force-auto-update unity/unity git@github.cds.internal.unity3d.com:unity/homebrew-unity.git
@@ -29,7 +30,7 @@ Build_Player_With_Tests_iOS:
     - unity-downloader-cli -c Editor -c iOS -u $UNITY_BRANCH --wait 
     - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr --output utr
     - chmod +x ./utr
-    - ./utr --suite=playmode --platform=iOS --editor-location=.Editor --testproject=. --player-save-path=build/players --artifacts_path=build/logs --architecture=ARM64 --build-only
+    - ./utr --suite=playmode --platform=iOS --editor-location=.Editor --testproject=. --testfilter=UniversalRenderingExamples --player-save-path=build/players --artifacts_path=build/logs --architecture=ARM64 --build-only
   artifacts:
     players:
         paths:
@@ -55,7 +56,7 @@ Run_Player_With_Tests_iOS:
   commands:
     - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
     - chmod +x ./utr
-    - ./utr --suite=playmode --platform=iOS --player-load-path=build/players --artifacts_path=build/test-results
+    - ./utr --suite=playmode --platform=iOS --player-load-path=build/players --testfilter=UniversalRenderingExamples --artifacts_path=build/test-results
   artifacts:
     logs:
         paths:

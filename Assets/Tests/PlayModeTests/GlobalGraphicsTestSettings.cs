@@ -10,7 +10,7 @@ public class GraphicsTests
 {
     public const string universalPackagePath = "Assets/ReferenceImages";
 
-    [UnityTest, Category("TerrainTest")]
+    [UnityTest, Category("RenderingExamplesTest")]
     [PrebuildSetup("SetupGraphicsTestCases")]
     [UseGraphicsTestCases(universalPackagePath)]
     
