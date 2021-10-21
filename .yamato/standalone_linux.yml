@@ -11,7 +11,6 @@
         image: cds-ops/ubuntu-18.04-base:stable
         flavor: b1.xlarge
     commands:
-      - git config --global core.compression 9
       - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout $GRAPHICS_BRANCH
       - sudo rm -f /etc/apt/sources.list /etc/apt/sources.list.d/{nodesource,teamviewer,deadsnakes-ubuntu-ppa-}*
       - curl -L https://artifactory.prd.it.unity3d.com/artifactory/api/gpg/key/public | sudo apt-key add -
@@ -26,7 +25,7 @@
       - unity-config project add testable unity.graphictests.performance.universal  --project-path .
       - unity-config project set project-update false --project-path .
       - sudo pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
-      - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait 
+      - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait --fast
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
       - ./utr --suite=playmode --platform=StandaloneLinux64 --editor-location=.Editor --testfilter=UniversalRenderingExamples--testproject=. --player-save-path=build/players --artifacts_path=build/logs --build-only

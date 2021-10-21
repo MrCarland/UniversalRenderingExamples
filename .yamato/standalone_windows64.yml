@@ -24,7 +24,7 @@
       - unity-config project add testable unity.graphictests.performance.universal  --project-path .
       - unity-config project set project-update false --project-path .
       - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
-      - unity-downloader-cli -u %UNITY_BRANCH% -c editor --wait
+      - unity-downloader-cli -u %UNITY_BRANCH% -c editor --wait --fast
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
       - ./utr --suite=playmode --platform=StandaloneWindows64 --editor-location=.Editor --testfilter=UniversalRenderingExamples --testproject=. --player-save-path=build/players --artifacts_path=build/logs --build-only
     artifacts:

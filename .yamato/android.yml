@@ -11,7 +11,6 @@ Build_Player_With_Tests_Android:
       image: sdet/gamecode_win10:stable
       flavor: b1.xlarge
   commands:
-    - git config --global core.compression 9
     - git clone git@github.com:Unity-Technologies/Graphics.git && cd Graphics && git checkout %GRAPHICS_BRANCH%
     - ls 
     - choco source add -n Unity -s https://artifactory.prd.it.unity3d.com/artifactory/api/nuget/unity-choco-local
@@ -24,7 +23,7 @@ Build_Player_With_Tests_Android:
     - unity-config project add testable unity.graphictests.performance.universal  --project-path .
     - unity-config project set project-update false --project-path .
     - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
-    - unity-downloader-cli -c Editor -c Android -u %UNITY_BRANCH% --wait 
+    - unity-downloader-cli -c Editor -c Android -u %UNITY_BRANCH% --wait --fast
     - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
     - ./utr --suite=playmode --platform=Android --editor-location=.Editor --testproject=. --testfilter=UniversalRenderingExamples --player-save-path=build/players --artifacts_path=build/logs --scripting-backend=il2cpp  --build-only
   artifacts:
