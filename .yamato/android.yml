@@ -25,7 +25,7 @@ Build_Player_With_Tests_Android:
     - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
     - unity-downloader-cli -c Editor -c Android -u %UNITY_BRANCH% --wait
     - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
-    - ./utr --suite=playmode --platform=Android --editor-location=.Editor --testproject=. --player-save-path=build/players --artifacts_path=build/logs --scripting-backend=il2cpp  --build-only
+    - ./utr --suite=playmode --platform=Android --editor-location=.Editor --testproject=. --category=RenderingSamplesTest --player-save-path=build/players --artifacts_path=build/logs --scripting-backend=il2cpp  --build-only
   artifacts:
     players:
         paths:
@@ -58,7 +58,7 @@ Run_Player_With_Tests_Android:
     - |
        curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
        start %ANDROID_SDK_ROOT%\platform-tools\adb.exe devices
-       ./utr --suite=playmode --platform=android --testfilter=UniversalRenderingExamples --player-load-path=build/players --artifacts_path=build/test-results
+       ./utr --suite=playmode --platform=android --category=RenderingSamplesTest --player-load-path=build/players --artifacts_path=build/test-results
   artifacts:
     logs:
         paths:
