@@ -26,7 +26,7 @@
       - pip install unity-downloader-cli --index-url https://artifactory.prd.it.unity3d.com/artifactory/api/pypi/pypi/simple --upgrade
       - unity-downloader-cli -u %UNITY_BRANCH% -c editor --wait
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr.bat --output utr.bat
-      - ./utr --suite=playmode --platform=StandaloneWindows64 --editor-location=.Editor --testproject=. --category=RenderingExamplesTest--player-save-path=build/players --artifacts_path=build/logs --build-only
+      - ./utr --suite=playmode --platform=StandaloneWindows64 --editor-location=.Editor --testproject=. --category=RenderingExamplesTest --player-save-path=build/players --artifacts_path=build/logs --build-only
     artifacts:
       players:
           paths:
