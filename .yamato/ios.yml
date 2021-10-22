@@ -26,7 +26,7 @@ Build_Player_With_Tests_iOS:
     # note: --fast tells unity downloader to get the latest available version editor. 
     # Saves some time in case if editor is building after batch landed to trunk
     # You might want to remove it in our production environment.
-    - unity-downloader-cli -c Editor -c iOS -u $UNITY_BRANCH --wait --fast
+    - unity-downloader-cli -c Editor -c iOS -u $UNITY_BRANCH --wait
     - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr --output utr
     - chmod +x ./utr
     - ./utr --suite=playmode --platform=iOS --editor-location=.Editor --testproject=.  --player-save-path=build/players --artifacts_path=build/logs --architecture=ARM64 --build-only
