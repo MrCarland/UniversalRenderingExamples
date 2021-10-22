@@ -28,7 +28,7 @@
       - unity-downloader-cli -u $UNITY_BRANCH -c editor --wait 
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
-      - ./utr --suite=playmode --platform=StandaloneLinux64 --editor-location=.Editor --testproject=. --category=RenderingSamplesTest --player-save-path=build/players --artifacts_path=build/logs --build-only
+      - ./utr --suite=playmode --platform=StandaloneLinux64 --editor-location=.Editor --testproject=. --category=RenderingExamplesTest --player-save-path=build/players --artifacts_path=build/logs --build-only
     artifacts:
       players:
           paths:
@@ -56,7 +56,7 @@
     commands:
       - curl -s https://artifactory.prd.it.unity3d.com/artifactory/unity-tools-local/utr-standalone/utr  --output utr
       - chmod +x ./utr
-      - ./utr --suite=playmode --platform=StandaloneLinux64 --player-load-path=build/players --category=RenderingSamplesTest --artifacts_path=build/test-results --player-connection-ip=auto
+      - ./utr --suite=playmode --platform=StandaloneLinux64 --player-load-path=build/players --category=RenderingExamplesTest --artifacts_path=build/test-results --player-connection-ip=auto
     artifacts:
       logs:
           paths:
