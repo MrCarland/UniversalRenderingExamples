@@ -13,20 +13,15 @@ Run_All:
       refs_on_this_repository:
         - "{{ branch }}"
   dependencies:
-  - path: .yamato/android.yml#Run_Player_With_Tests_Android
+  - path: .yamato/android.yml#Run_Player_With_Tests_Android_Samsung_USA
+    rerun: always
+  - path: .yamato/android.yml#Run_Player_With_Tests_Android_Samsung_EU
     rerun: always
   - path: .yamato/ios.yml#Run_Player_With_Tests_iOS  
     rerun: always
-  # - path: .yamato/ps4.yml#Run_Player_With_Tests_PS4
-  #   rerun: always
-  # - path: .yamato/ps5.yml#Run_Player_With_Tests_PS5
-  #   rerun: always
   - path: .yamato/standalone_linux.yml#Run_Player_With_Tests_StandaloneLinux64
     rerun: always
   - path: .yamato/standalone_macosx.yml#Run_Player_With_Tests_StandaloneOSX
     rerun: always
   - path: .yamato/standalone_windows64.yml#Run_Player_With_Tests_StandaloneWindows64
     rerun: always
-  # - path: .yamato/xbox.yml#Run_Player_With_Tests_XBoxOne
-  #   rerun: always
-
